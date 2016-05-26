@@ -12,7 +12,7 @@
     <properties>
         <username>root</username>
         <password>12345</password>
-        <host>10.0.1.1</host>
+        <host>10.0.3.1</host>
         <dir>/home/lejos/programs/</dir>
     </properties>
 
@@ -42,7 +42,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>SolverRobot</mainClass>
                         </manifest>
                     </archive>
                     <appendAssemblyId>false</appendAssemblyId>

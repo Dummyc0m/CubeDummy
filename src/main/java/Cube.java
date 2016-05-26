@@ -33,18 +33,21 @@ public class Cube {
                 yaw = (yaw + 1) % 4;
                 pitch = (pitch + 3) % 4;
                 holder.rotateMagic(1);
+                Delay.msDelay(200L);
                 arm.repeatMagic(1);
                 break;
             case RIGHT:
                 yaw = (yaw + 3) % 4;
                 pitch = (pitch + 3) % 4;
                 holder.rotateMagic(3);
+                Delay.msDelay(200L);
                 arm.repeatMagic(1);
                 break;
             case FRONT:
                 yaw = (yaw + 2) % 4;
                 pitch = (pitch + 1) % 4;
                 holder.rotateMagic(2);
+                Delay.msDelay(200L);
                 arm.repeatMagic(1);
                 break;
             case BACK:
@@ -52,10 +55,11 @@ public class Cube {
                 arm.repeatMagic(1);
                 break;
         }
-        arm.doMagic();
+        Delay.msDelay(200L);
+        arm.holdMagic();
         Delay.msDelay(200L);
         holder.rotateMagic(operation.getParameter());
         Delay.msDelay(200L);
-        arm.reverseMagic();
+        arm.releaseMagic();
     }
 }

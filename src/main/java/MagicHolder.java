@@ -8,7 +8,7 @@ public class MagicHolder {
     private int currentPos;
 
     public MagicHolder(NXTRegulatedMotor motor) {
-        motor.setSpeed(360);
+        motor.setSpeed(150);
         this.motor = motor;
     }
 

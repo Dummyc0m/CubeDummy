@@ -7,6 +7,7 @@ import lejos.utility.Delay;
 public class MagicArm {
     private NXTRegulatedMotor motor;
     private int magic = 90;
+    private int holdMagic = 30;
 
     public MagicArm(NXTRegulatedMotor motor) {
         motor.setSpeed(360);
@@ -15,6 +16,14 @@ public class MagicArm {
 
     public void doMagic() {
         motor.rotate(magic);
+    }
+
+    public void holdMagic() {
+        motor.rotate(holdMagic);
+    }
+
+    public void releaseMagic() {
+        motor.rotate(-holdMagic);
     }
 
     public void reverseMagic() {
